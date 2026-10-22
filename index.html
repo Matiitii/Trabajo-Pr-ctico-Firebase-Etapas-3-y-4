@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de musica </title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+ <header class="encabezado">
+    <h1>Control de stock</h1>
+  </header>
+
+<div class="interfazPrincipal">
+
+
+    <div class="navegacion">
+        <button id="btnVerFormulario" class="btn-principal">Añadir producto</button>
+        <button id="btnVerBuscador" class="btn-principal">Buscador de productos</button>
+    </div>
+
+    
+    <div id="seccionRegistrar" class="tarjeta">
+        <h2>Registrar Producto</h2>
+
+        <div class="campos">
+            <div class="campo">
+                <h3>Nombre</h3>
+                <input id="nombreINGRESADO" type="text" placeholder="Ej. Album / Canción">
+            </div>
+
+            <div class="campo">
+                <h3>Artista</h3>
+                <input id="artistaINGRESADO" type="text" placeholder="Ej. Nombre del artista">
+            </div>
+
+            <div class="campo">
+                <h3>Género</h3>
+                <input id="generoINGRESADO" type="text" placeholder="Ej. Rock, Pop, etc.">
+            </div>
+
+            <div class="campo">
+                <h3>Unidades</h3>
+                <input id="unidadesINGRESADO" type="number">
+            </div>
+
+            <div class="campo">
+                <h3>Precio</h3>
+                <input id="precioINGRESADO" type="number">
+            </div>
+        </div>
+
+        <button class="btn-principal btn-publicar">Publicar</button>
+
+       
+        <div id="contenedorRecienCargado" class="seccion-oculta">
+            <h3>¡Producto Cargado Exitosamente!</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Generado</th>
+                        <th>Nombre</th>
+                        <th>Artista</th>
+                        <th>Género</th>
+                        <th>Unidades</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaUltimoProducto">
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    
+    <div id="seccionBuscador" class="interfaz seccion-oculta">
+        <h3>Buscador y Lista de Productos</h3>
+
+       
+        <div class="campo-busqueda">
+            <h3>Buscar por Artista o Nombre:</h3>
+            <input id="inputBusqueda" type="text" placeholder="Escribe un artista o nombre para filtrar...">
+        </div>
+
+        
+        <div id="vista-vacia" class="ancho-completo">
+            <h3>No hay productos registrados o ninguno coincide con la búsqueda.</h3>
+        </div>
+
+      
+        <div id="vista-tabla" class="ancho-completo">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Generado</th>
+                        <th>Nombre</th>
+                        <th>Artista</th>
+                        <th>Género</th>
+                        <th>Unidades</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody class="tabla-productos">
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="app.js"  type="module"></script>
+</html>
